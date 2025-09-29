@@ -59,7 +59,7 @@ export default function WelcomeScreen({ onStartQuiz, questionsRemaining, hasPlay
                 Welcome back!
               </p>
               <p className="text-muted-foreground">
-                You've completed today's quiz. Come back tomorrow for new questions!
+                You&apos;ve completed today&apos;s quiz. Come back tomorrow for new questions!
               </p>
             </div>
           ) : (
@@ -88,7 +88,7 @@ export default function WelcomeScreen({ onStartQuiz, questionsRemaining, hasPlay
                 data-testid="button-start-quiz"
               >
                 <Play className="w-4 h-4 mr-2" />
-                Start Today's Quiz
+                Start Today&apos;s Quiz
               </Button>
             </div>
           )}
@@ -99,7 +99,7 @@ export default function WelcomeScreen({ onStartQuiz, questionsRemaining, hasPlay
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            "And it is We who have sent down the Quran and indeed, We will be its guardian." - Quran 15:9
+            &quot;And it is We who have sent down the Quran and indeed, We will be its guardian.&quot; - Quran 15:9
           </motion.p>
         </motion.div>
       </Card>

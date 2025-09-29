@@ -162,7 +162,6 @@ export default function QuizGame({ className, chapters }: QuizGameProps) {
           <AnswerFeedback
             isCorrect={isCorrect}
             correctAnswer={currentChapter.revelation_place}
-            userAnswer={userAnswer}
             onContinue={handleContinue}
           />
         )}

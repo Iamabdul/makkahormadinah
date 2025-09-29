@@ -39,7 +39,7 @@ export default function QuizCard({ chapter, onAnswer, isAnswering }: QuizCardPro
               {chapter.name_arabic}
             </p>
             <p className="text-lg text-muted-foreground">
-              "{chapter.translated_name.name}"
+            &quot;{chapter.translated_name.name}&quot;
             </p>
           </motion.div>
         </div>

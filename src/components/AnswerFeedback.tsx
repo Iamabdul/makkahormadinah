@@ -5,14 +5,12 @@ import { Card } from "@/components/ui/card";
 interface AnswerFeedbackProps {
   isCorrect: boolean;
   correctAnswer: "makkah" | "madinah";
-  userAnswer: "makkah" | "madinah";
   onContinue: () => void;
 }
 
 export default function AnswerFeedback({ 
   isCorrect, 
   correctAnswer, 
-  userAnswer, 
   onContinue 
 }: AnswerFeedbackProps) {
   return (

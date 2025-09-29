@@ -115,7 +115,7 @@ export default function ResultsScreen({
           ) : (
             <div className="space-y-2">
               <p className="text-muted-foreground">
-                You've completed today's quiz!
+                You&apos;ve completed today&apos;s quiz!
               </p>
               <p className="text-sm text-muted-foreground" data-testid="text-next-game-time">
                 Come back {timeUntilNextGame} for 5 new questions
