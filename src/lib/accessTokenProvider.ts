@@ -1,16 +1,28 @@
 "use server";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 
-let instance: string;
+let tokenInstance: string;
 
 export async function accessTokenProvider() {
-  if (!instance) {
-    instance = await getAccessToken();
+  if (tokenInstance && isWithinTimestamp(tokenInstance)) {
+    return {
+      instance: tokenInstance,
+    };
   }
+
+  tokenInstance = await getAccessToken();
+
   return {
-    instance,
+    instance: tokenInstance,
   };
 }
+
+const isWithinTimestamp = (token: string): boolean => {
+  const expirationTimeInMs = 59 * 59 * 1000;
+  const decodedToken = jwtDecode(token);
+  return decodedToken && Date.now() - decodedToken.exp! < expirationTimeInMs;
+};
 
 async function getAccessToken(): Promise<string> {
   const clientId = process.env.QURAN_FDN_CLIENT_ID;
